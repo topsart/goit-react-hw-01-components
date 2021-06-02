@@ -6,19 +6,21 @@ import randomColor from "randomcolor";
 const Statistics = ({ title, stats }) => (
   <section className={styles.statistics}>
     <div style={{ padding: "30px 50px" }} className="container">
-      {title && <h2 className={styles.title}>{title}</h2>}
-      <ul className={styles.statlist}>
-        {stats.map(({ id, label, percentage }) => (
-          <li
-            key={id}
-            style={{ backgroundColor: randomColor() }}
-            className={styles.item}
-          >
-            <span className={styles.label}>{label}</span>
-            <span className={styles.percentage}>{percentage}%</span>
-          </li>
-        ))}
-      </ul>
+      <div className={styles.statistics_container}>
+        {title && <h2 className={styles.title}>{title}</h2>}
+        <ul className={styles.statlist}>
+          {stats.map(({ id, label, percentage }) => (
+            <li
+              key={id}
+              style={{ backgroundColor: randomColor() }}
+              className={styles.item}
+            >
+              <span className={styles.label}>{label}</span>
+              <span className={styles.percentage}>{percentage}%</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   </section>
 );
