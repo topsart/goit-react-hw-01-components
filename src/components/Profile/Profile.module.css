@@ -39,6 +39,7 @@
   justify-content: center;
   background-color: #f3f6f9;
   justify-content: space-between;
+  border: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 .stats__item {
@@ -47,6 +48,11 @@
   align-items: center;
   width: 100%;
   padding: 20px 10px;
+}
+
+.stats__item:nth-child(2) {
+  border-left: 1px solid rgba(128, 128, 128, 0.5);
+  border-right: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 .label {
